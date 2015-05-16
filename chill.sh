@@ -37,12 +37,13 @@ main(){
   clear
   while true;do
 
+    notify-send "Chill out and relax. (^_^)"
     chillCount
     beep 1000000
     echo "next bong hit in ${READYTIME} seconds"
     sleep ${READYTIME}
+    notify-send "Light the bong now!"
     bongCount
-    beep 1000000
   done
 }
 
