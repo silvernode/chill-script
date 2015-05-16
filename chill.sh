@@ -2,7 +2,7 @@
 
 CHILLTIME=1 # Minutes between bong hits
 BONGTIME=1  # Minutes during bong hits
-
+READYTIME=60
 
 chillCount(){
   clear
@@ -38,7 +38,11 @@ main(){
   while true;do
 
     chillCount
+    beep 1000000
+    echo "next bong hit in ${READYTIME} seconds"
+    sleep ${READYTIME}
     bongCount
+    beep 1000000
   done
 }
 
